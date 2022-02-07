@@ -1,0 +1,147 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Rubik", sans-serif;
+}
+
+body {
+  text-align: center;
+  background-color: rgb(26, 25, 25);
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  
+}
+
+h1 {
+  padding-top: 30px;
+}
+
+/*CALCULADORA*/
+
+#calculator {
+  height: 420px;
+  width: 300px;
+  border: 1px solid rgba(0, 0, 0, .5);
+  border-radius: 5px;
+  margin: auto;
+}
+
+#calculator form {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, .5);
+}
+
+
+
+#textfield {
+  width: 100%;
+  font-family: "Rubik", sans-serif;
+  cursor: default;
+  background-color: rgba(0, 0, 0, .5);
+  color: white;
+  padding: 15px;
+  text-align: right;
+  font-size: 50px;
+  border: 0;
+  outline: none;
+}
+
+#calculator input[type=button], input[type=reset] {
+  width: 22%;
+  cursor: pointer;
+  font-family: "Rubik", sans-serif;
+  font-weight: bold;
+  font-size: 26px;
+  padding: 18px;
+  margin: 3px;
+  border: 0;
+  border-radius: 20%;
+}
+
+.orange {
+  background-color: rgb(253, 149, 3);
+  color: white;
+}
+
+.gray {
+  background-color: rgb(51, 51, 51);
+  color: white;
+}
+
+/*RELOJ*/
+
+.wrap {
+  color: white;
+  width: 100%;
+  background: rgb(26, 25, 25);
+  margin: auto;
+}
+
+.all {
+  margin: 50px;
+}
+
+.all p {
+  display: inline-block;
+  line-height: 1em;
+}
+
+.date {
+  font-family: "Rubik", sans-serif;
+  text-align: center;
+  font-size: 1.5em;
+  margin-bottom: 5px;
+  background: rgba(0, 0, 0, .5);
+  padding: 20px;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.clock {
+  font-family: "Rubik", sans-serif;
+  text-align: center;
+  font-size: 4em;
+  background: rgba(0, 0, 0, .5);
+  padding: 20px;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.clock .boxSeconds {
+  display: inline-block;
+}
+
+.clock .seconds,
+.clock .ampm {
+  font-size: 2rem;
+  display: block;  
+}
+
+/* WEATHER */
+
+#weather {
+  padding: 20px;
+  color: white;
+
+}
+
+.margin {
+  background-color: rgba(0, 0, 0, .5);
+  padding-bottom: 30px;
+  border-radius: 5px;
+  font-size: 1.5em;
+  padding: 20px;
+}
+
+.margin p {
+  margin: 15px 0;
+}
+
+#temperatura-valor {
+  font-size: 40px;
+}

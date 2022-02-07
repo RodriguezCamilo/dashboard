@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript</title>
+    <link rel="stylesheet" href="CSS/styles.css">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <main>
+
+        <div class="wrap">
+            <div class="all">
+                <div class="date">
+                    <p id="week" class="week"></p>
+                    <p id="day" class="day"></p>
+                    <p>de</p>
+                    <p id="month" class="month"></p>
+                    <p>del</p>
+                    <p id="year" class="year"></p>
+                </div>
+                <div class="clock">
+                    <p id="hours" class="hours"></p>
+                    <p>:</p>
+                    <p id="minutes" class="minutes"></p>
+                    <p>:</p>
+                    <div class="boxSeconds">
+                        <p id="ampm" class="ampm"></p>
+                        <p id="seconds" class="seconds"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="weather">
+            <div class="margin">
+                <div>
+                    <p id="temperatura-valor"></p>
+                    <p id="temperatura-descripcion"></p>
+                </div>
+                <div>
+                    <p id="ubicacion"></p>
+                    <img id="icono" src="" alt="">
+                </div>
+                <div>
+                    <p>Velocidad del Viento</p>
+                    <p id="viento-velocidad"></p>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="calculator">
+            <form name="calc">
+                <input id="textfield" type="textfield" name="answer" value="" autocomplete="off" readonly>
+
+                <input type="button" value="7" onclick="document.calc.answer.value+='7'" class="gray">
+                <input type="button" value="8" onclick="document.calc.answer.value+='8'" class="gray">
+                <input type="button" value="9" onclick="document.calc.answer.value+='9'" class="gray">
+                <input type="button" value="+" onclick="document.calc.answer.value+='+'" class="orange">
+                <br>
+                <input type="button" value="4" onclick="document.calc.answer.value+='4'" class="gray">
+                <input type="button" value="5" onclick="document.calc.answer.value+='5'" class="gray">
+                <input type="button" value="6" onclick="document.calc.answer.value+='6'" class="gray">
+                <input type="button" value="-" onclick="document.calc.answer.value+='-'" class="orange">
+                <br>
+                <input type="button" value="1" onclick="document.calc.answer.value+='1'" class="gray">
+                <input type="button" value="2" onclick="document.calc.answer.value+='2'" class="gray">
+                <input type="button" value="3" onclick="document.calc.answer.value+='3'" class="gray">
+                <input type="button" value="X" onclick="document.calc.answer.value+='*'" class="orange">
+                <br>
+                <input type="button" value="0" onclick="document.calc.answer.value+='0'" class="gray">
+                <input type="reset" value="C">
+                <input type="button" value="=" onclick="document.calc.answer.value=eval(document.calc.answer.value)">
+                <input type="button" value="/" onclick="document.calc.answer.value+='/'" class="orange">
+            </form>
+        </div>
+    </main>
+    <script src="JS/clock.js"></script>
+    <script src="JS/weather.js"></script>
+</body>
+
+</html>
