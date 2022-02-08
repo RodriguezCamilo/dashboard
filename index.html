@@ -15,6 +15,12 @@
 </head>
 
 <body>
+    <div id="storage">
+        <div id="pregunta"></div>
+        <div id="name"></div>
+        <div id="submit"></div>
+    </div>
+
     <main>
 
         <div class="wrap">
@@ -33,7 +39,6 @@
                     <p id="minutes" class="minutes"></p>
                     <p>:</p>
                     <div class="boxSeconds">
-                        <p id="ampm" class="ampm"></p>
                         <p id="seconds" class="seconds"></p>
                     </div>
                 </div>
@@ -42,17 +47,13 @@
 
         <div id="weather">
             <div class="margin">
-                <div>
-                    <p id="temperatura-valor"></p>
-                    <p id="temperatura-descripcion"></p>
-                </div>
-                <div>
+                <div class="weather">
                     <p id="ubicacion"></p>
                     <img id="icono" src="" alt="">
                 </div>
-                <div>
-                    <p>Velocidad del Viento</p>
-                    <p id="viento-velocidad"></p>
+                <div class="weather">
+                    <p id="valor"></p>
+                    <p id="descripcion"></p>
                 </div>
             </div>
         </div>
@@ -65,27 +66,30 @@
                 <input type="button" value="7" onclick="document.calc.answer.value+='7'" class="gray">
                 <input type="button" value="8" onclick="document.calc.answer.value+='8'" class="gray">
                 <input type="button" value="9" onclick="document.calc.answer.value+='9'" class="gray">
-                <input type="button" value="+" onclick="document.calc.answer.value+='+'" class="orange">
+                <input type="button" value="+" onclick="document.calc.answer.value+='+'" class="blue">
                 <br>
                 <input type="button" value="4" onclick="document.calc.answer.value+='4'" class="gray">
                 <input type="button" value="5" onclick="document.calc.answer.value+='5'" class="gray">
                 <input type="button" value="6" onclick="document.calc.answer.value+='6'" class="gray">
-                <input type="button" value="-" onclick="document.calc.answer.value+='-'" class="orange">
+                <input type="button" value="-" onclick="document.calc.answer.value+='-'" class="blue">
                 <br>
                 <input type="button" value="1" onclick="document.calc.answer.value+='1'" class="gray">
                 <input type="button" value="2" onclick="document.calc.answer.value+='2'" class="gray">
                 <input type="button" value="3" onclick="document.calc.answer.value+='3'" class="gray">
-                <input type="button" value="X" onclick="document.calc.answer.value+='*'" class="orange">
+                <input type="button" value="X" onclick="document.calc.answer.value+='*'" class="blue">
                 <br>
                 <input type="button" value="0" onclick="document.calc.answer.value+='0'" class="gray">
                 <input type="reset" value="C">
                 <input type="button" value="=" onclick="document.calc.answer.value=eval(document.calc.answer.value)">
-                <input type="button" value="/" onclick="document.calc.answer.value+='/'" class="orange">
+                <input type="button" value="/" onclick="document.calc.answer.value+='/'" class="blue">
             </form>
         </div>
     </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="JS/script.js"></script>
     <script src="JS/clock.js"></script>
     <script src="JS/weather.js"></script>
+
 </body>
 
 </html>

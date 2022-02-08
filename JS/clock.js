@@ -1,57 +1,49 @@
+// Info from here https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Date
 
+let refresh = function () {
 
-    let refresh = function () {
-        let fecha = new Date(),
-            hours = fecha.getHours(),
-            ampm,
-            minutes = fecha.getMinutes(),
-            seconds = fecha.getSeconds(),
-            week = fecha.getDay(),
-            day = fecha.getDate(),
-            month = fecha.getMonth(),
-            year = fecha.getFullYear();
+    // Hacemos variables en base al objeto Date
+    let fecha = new Date(),
+        hours = fecha.getHours(),
+        minutes = fecha.getMinutes(),
+        seconds = fecha.getSeconds(),
+        week = fecha.getDay(),
+        day = fecha.getDate(),
+        month = fecha.getMonth(),
+        year = fecha.getFullYear();
 
-        let pHours = document.getElementById("hours"),
-            pAMPM = document.getElementById("ampm"),
-            pMinutes = document.getElementById("minutes"),
-            pSeconds = document.getElementById("seconds"),
-            pWeek = document.getElementById("week"),
-            pDay = document.getElementById("day"),
-            pMonth = document.getElementById("month"),
-            pYear = document.getElementById("year");
+    // Elementos del DOM
+    let Hours = document.getElementById("hours"),
+        Minutes = document.getElementById("minutes"),
+        Seconds = document.getElementById("seconds"),
+        Week = document.getElementById("week"),
+        Day = document.getElementById("day"),
+        Month = document.getElementById("month"),
+        Year = document.getElementById("year");
 
+    // Arrays para transformar 
+    const sWeek = ["Domingo", "Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado"];
+    Week.textContent = sWeek[week];
 
-        const sWeek = ["Domingo", "Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado"];
-        pWeek.textContent = sWeek[week];
+    Day.textContent = day;
+    const sMonth = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+    Month.textContent = sMonth[month];
+    Year.textContent = year;
 
-        pDay.textContent = day;
-        const sMonth = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
-        pMonth.textContent = sMonth[month];
-        pYear.textContent = year;
-
-
-        if (hours >= 12) {
-            hours = hours - 12;
-            ampm = "PM";
-        } else {
-            ampm = "AM";
-        }
-
-        if (hours == 0) {
-            hours = 12;
-        }
-
-        pHours.textContent = hours;
-        pAMPM.textContent = ampm;
-
-        if (minutes < 10) { minutes = "0" + minutes };
-        if (seconds < 10) { seconds = "0" + seconds };
-
-        pMinutes.textContent = minutes;
-        pSeconds.textContent = seconds;
+    Hours.textContent = hours;
+    // Arreglamos los minutos y segundos
+    if (minutes < 10) {
+        minutes = "0" + minutes
+    };
+    if (seconds < 10) {
+        seconds = "0" + seconds
     };
 
-    refresh();
-    let interval = setInterval(refresh, 1000);
+    Minutes.textContent = minutes;
+    Seconds.textContent = seconds;
+};
+
+refresh();
+let interval = setInterval(refresh, 1000);
 
 
