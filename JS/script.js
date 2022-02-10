@@ -47,4 +47,4 @@ else {
 }
 
 
-//jasjsajask me di cuenta que si hubiera usado textcontent me habria ahorrado codigo creo
+//jasjsajask me di cuenta que si hubiera usado textcontent me habria ahorrado codigo creo y ademas fue antes de la clase de efectos rayos bueno sale un lolcito?
