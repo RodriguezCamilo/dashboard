@@ -15,14 +15,15 @@
 </head>
 
 <body>
+
     <div id="storage">
         <div id="pregunta"></div>
         <div id="name"></div>
         <div id="submit"></div>
+        <div id="borrado"></div>
     </div>
-
     <main>
-
+        <!-- RELOJ -->
         <div class="wrap">
             <div class="all">
                 <div class="date">
@@ -45,6 +46,30 @@
             </div>
         </div>
 
+                <!-- CALENDARIO -->
+
+                <div class="container">
+                    <div class="calendar">
+                        <div class="month">
+                            <div class="date">
+                                <h2></h2>
+                            </div>
+                        </div>
+                        <div class="weekdays">
+                            <div>Dom</div>
+                            <div>Lun</div>
+                            <div>Mar</div>
+                            <div>Mie</div>
+                            <div>Jue</div>
+                            <div>Vie</div>
+                            <div>Sab</div>
+                        </div>
+                        <div class="days"></div>
+                    </div>
+                </div>
+
+        <!-- API CLIMA -->
+
         <div id="weather">
             <div class="margin">
                 <div class="weather">
@@ -58,6 +83,9 @@
             </div>
         </div>
 
+
+        <!-- CALCULADORA -->
+        <!-- Soy conciente de que esta no es la manera de hacerla, pasa que me la cruce leyendo documentacion y queria agregarla solo para tenerla en mi proyecto-->
 
         <div id="calculator">
             <form name="calc">
@@ -84,6 +112,28 @@
                 <input type="button" value="/" onclick="document.calc.answer.value+='/'" class="blue">
             </form>
         </div>
+
+<!-- LISTA DE TAREAS -->
+
+<div id="lista">
+    <h2>Tareas</h2>
+    <div>
+        <div>
+            <input type="text" id="tarea" placeholder="Agregar tarea.">
+            <button onclick="agregar()">+</button>
+        </div>
+    </div>
+    <div class="tareas">
+        <ul id="li">
+
+        </ul>
+
+    </div>
+
+</div>
+
+        <!-- JUEGO DE PUNTERIA -->
+
         <div>
             <p id="start">Start!</p>
             <div class="contenedor points">
@@ -95,13 +145,16 @@
                 <div id="player"></div>
             </div>
         </div>
+
+
     </main>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="JS/script.js"></script>
+    <script src="JS/bienvenida.js"></script>
     <script src="JS/clock.js"></script>
     <script src="JS/weather.js"></script>
     <script src="JS/aim.js"></script>
-
+    <script src="JS/todo.js"></script>
+    <script src="JS/calendario.js"></script>
 </body>
 
 </html>

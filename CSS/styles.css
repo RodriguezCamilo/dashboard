@@ -19,9 +19,11 @@ main {
 
 h1 {
   padding-top: 30px;
+  
 }
 
 /*NOMBRE*/
+
 #storage {
   text-align: left;
   color: white;
@@ -29,6 +31,8 @@ h1 {
   height: 60px;
   font-size: 40px;
   align-items: center;
+  background-color: rgba(0, 0, 0, .5);
+
 }
 #storage input {
   margin: 10px;
@@ -109,12 +113,7 @@ h1 {
 .wrap {
   color: white;
   width: 100%;
-  background: rgb(26, 25, 25);
   margin: auto;
-}
-
-.all {
-  margin: 50px;
 }
 
 .all p {
@@ -136,7 +135,7 @@ h1 {
 .clock {
   font-family: "Rubik", sans-serif;
   text-align: center;
-  font-size: 4em;
+  font-size: 3em;
   background: rgba(0, 0, 0, .5);
   padding: 20px;
   width: 100%;
@@ -219,7 +218,6 @@ h1 {
   height: 50px;
   width: 500px;
   border-bottom: 0px;
-  margin-top: 10px;
   color: white;
   font-size: 20px;
   text-align: center;
@@ -229,16 +227,79 @@ h1 {
 #start {
   display: block;
   width: 500px;
-  text-align: center;
-  margin: 20px auto;
-  background-color: rgb(28, 30, 131);
+  background-color: rgba(0, 0, 0, .5);
   color: whitesmoke;
   font-size: 40px;
   cursor: pointer;
   transition: 0.1s;
+  margin: auto;
 }
 
 #start:hover {
   color: #020024;
   background-color: whitesmoke;
+}
+
+
+/* LISTA DE TAREAS */
+
+#lista {
+  background-color: rgba(0, 0, 0, .5);
+  color: white;
+  min-height: 400px;
+  margin-right: 30px;
+}
+
+#lista h2 {
+  margin: 20px;
+  font-size: 1.8em;
+}
+
+li, ul {
+  list-style: none;
+}
+
+li span {
+  color: rgb(0, 26, 255);
+
+  cursor: pointer;
+}
+
+/* CALENDARIO */
+
+.container {
+  padding: 20px;
+  max-width: 100%;
+  color: white;
+}
+
+.weekdays{
+  background-color: rgb(28, 30, 131);
+}
+
+.weekdays, .days {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  padding: 5px;
+}
+
+.days {
+  background-color: rgba(0, 0, 0, .5);
+}
+
+.days div {
+  border: 1px solid rgb(0, 0, 0, 0);
+  padding: 10px 5px;
+}
+
+.days div:hover {
+  border: 1px solid white;
+}
+
+.hoy {
+  background-color:  rgb(0, 26, 255);
+}
+
+.diaAnterior, .diaSiguiente {
+  color: rgb(73, 73, 73);
 }

@@ -8,7 +8,7 @@ $(() => {
 
             let score = 0;
             let time = 61;
-
+            document.getElementById("puntos").innerHTML = "Puntos: <b>" + score + "</b>";
             // Comportamiento de la pelota y sumamos puntos
             $("#player").click(() => {
                 score++;
