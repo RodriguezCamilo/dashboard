@@ -62,5 +62,6 @@ for (let i = 1; i <= ultimoDia; i++) {
 //Y aca dibujamos los dias que inician el mes siguiente
 for (let j = 1; j <= diasSiguientes; j++) {
     dia += `<div class="diaSiguiente">${j}</div>`;
-    dias.innerHTML = dia;
 }
+
+dias.innerHTML = dia;
